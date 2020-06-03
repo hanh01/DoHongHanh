@@ -1,7 +1,25 @@
 import React,{Component} from "react";
+import { Drawer, Button } from 'antd';
+import './Table.css';
 
 class Table extends Component{
+    state = { visible: false, setVisible: false};
     render(){
+
+        const showDrawer = () => {
+            this.setState({
+                setVisible: true,
+                visible: false,
+            })
+        };
+
+        const onClose = () => {
+            this.setState({
+                setVisible: false,
+                visible: false,
+            })
+        };
+        const { setVisible,visible } = this.state;
         return(
             <table className="table table-bordered table-hover">
                 <thead>
@@ -20,9 +38,39 @@ class Table extends Component{
                     <td>vana11@gmail.com</td>
                     <td className="text-center">Đang hoạt động</td>
                     <td className="text-center">
-                        <button type="button" className="btn btn-success">
+                        <Button type="button" className="btn btn-success" onClick={showDrawer} >
                             <span className="fa fa-plus"></span> Xem thông tin
-                        </button>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer1"
+                            placement="top"
+                            closable={false}
+                            onClose={onClose}
+                            visible={setVisible}
+                        >
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents hihi...</p>
+                        </Drawer>
                     </td>
                 </tr>
                 <tr>
@@ -31,9 +79,24 @@ class Table extends Component{
                     <td>vanb11@gmail.com</td>
                     <td className="text-center">Ngừng hoạt động</td>
                     <td className="text-center">
-                        <button type="button" className="btn btn-success">
+                        <Button type="button" className="btn btn-success" onClick={showDrawer}>
                             <span className="fa fa-plus"></span> Xem thông tin
-                        </button>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer2"
+                            placement="top"
+                            closable={false}
+                            onClose={onClose}
+                            visible={setVisible}
+                        >
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some condtents...</p>
+                        </Drawer>
                     </td>
                 </tr>
                 <tr>
@@ -42,9 +105,24 @@ class Table extends Component{
                     <td>vanc11@gmail.com</td>
                     <td className="text-center">Đang hoạt động</td>
                     <td className="text-center">
-                        <button type="button" className="btn btn-success">
+                        <Button type="button" className="btn btn-success" onClick={showDrawer}>
                             <span className="fa fa-plus"></span> Xem thông tin
-                        </button>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer3"
+                            placement="top"
+                            closable={false}
+                            onClose={onClose}
+                            visible={setVisible}
+                        >
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some condtents...</p>
+                        </Drawer>
                     </td>
                 </tr>
                 <tr>
@@ -53,9 +131,24 @@ class Table extends Component{
                     <td>vand11@gmail.com</td>
                     <td className="text-center">Ngừng hoạt động</td>
                     <td className="text-center">
-                        <button type="button" className="btn btn-success">
+                        <Button type="button" className="btn btn-success"  onClick={showDrawer}>
                             <span className="fa fa-plus"></span> Xem thông tin
-                        </button>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer4"
+                            placement="top"
+                            closable={false}
+                            onClose={onClose}
+                            visible={setVisible}
+                        >
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some condtents...</p>
+                        </Drawer>
                     </td>
                 </tr>
                 <tr>
@@ -64,9 +157,24 @@ class Table extends Component{
                     <td>vanh11@gmail.com</td>
                     <td className="text-center">Đang hoạt động</td>
                     <td className="text-center">
-                        <button type="button" className="btn btn-success">
+                        <Button type="button" className="btn btn-success" onClick={showDrawer}>
                             <span className="fa fa-plus"></span> Xem thông tin
-                        </button>
+                        </Button>
+                        <Drawer
+                            title="Basic Drawer5"
+                            placement="top"
+                            closable={false}
+                            onClose={onClose}
+                            visible={setVisible}
+                        >
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some contents...</p>
+                            <p>Some condtents...</p>
+                        </Drawer>
                     </td>
                 </tr>
                 </tbody>
@@ -75,3 +183,4 @@ class Table extends Component{
     }
 }
 export default Table;
+

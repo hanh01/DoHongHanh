@@ -1,0 +1,9 @@
+[data-theme='compact'] .ant-drawer-body p {
+    margin-bottom: 0;
+}
+.ant-drawer-content-wrapper {
+    min-height: 90%;
+    max-width: 80%;
+    left: 10%;
+
+}

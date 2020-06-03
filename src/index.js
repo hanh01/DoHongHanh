@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import Table from "./Component/Table";
+import Demo_axios from "./Component/axios/Demo_axios";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Demo_axios />
   </React.StrictMode>,
   document.getElementById('root')
 );
