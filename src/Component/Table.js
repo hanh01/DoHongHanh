@@ -69,6 +69,28 @@ class Table extends Component{
                         </button>
                     </td>
                 </tr>
+                <tr>
+                    <td className="text-center">6</td>
+                    <td>Nguyễn Văn H</td>
+                    <td>vanh11@gmail.com</td>
+                    <td className="text-center">Đang hoạt động</td>
+                    <td className="text-center">
+                        <button type="button" className="btn btn-success">
+                            <span className="fa fa-plus"></span> Xem thông tin
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="text-center">7</td>
+                    <td>Nguyễn Văn H</td>
+                    <td>vanh11@gmail.com</td>
+                    <td className="text-center">Đang hoạt động</td>
+                    <td className="text-center">
+                        <button type="button" className="btn btn-success">
+                            <span className="fa fa-plus"></span> Xem thông tin
+                        </button>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         )
