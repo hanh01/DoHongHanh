@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{4FDDE663-9DEB-4D01-8B33-0CAD08743BA4}</ProjectGuid>
+    <ProjectGuid>{72B34699-A69C-4879-BB47-A8CC5F25B5A7}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hello_world</RootNamespace>
-    <AssemblyName>hello-world</AssemblyName>
+    <RootNamespace>Lap02</RootNamespace>
+    <AssemblyName>Lap02</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
@@ -119,11 +119,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    <Compile Include="Lap2.2.xaml.cs">
+      <DependentUpon>Lap2.2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="lap02.xaml.cs">
-      <DependentUpon>lap02.xaml</DependentUpon>
+    <Compile Include="Lap23.xaml.cs">
+      <DependentUpon>Lap23.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lap24.xaml.cs">
+      <DependentUpon>Lap24.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lap25.xaml.cs">
+      <DependentUpon>Lap25.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -150,11 +156,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BlankPage1.xaml">
+    <Page Include="Lap2.2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="lap02.xaml">
+    <Page Include="Lap23.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lap24.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lap25.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
