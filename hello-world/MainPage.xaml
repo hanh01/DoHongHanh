@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="hello_world.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:hello_world"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded" Width="1659">
+
+    <Grid Name="LayoutGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,10,0">
+
+        <Button Content="Click Me" 
+                Name="ClickMeButton" 
+                Margin="824,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="100" 
+                Width="200" 
+                Background="red" 
+                Click="ClickMeButton_Click"/>
+        <TextBox x:Name="ResultTextBlock" HorizontalAlignment="Left" Margin="1015,210,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="64"/>
+        <StackPanel Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Rectangle Fill= "Blue"
+                       Width="220"
+                       Height="220"/>
+            <Ellipse Fill="red" Width="175" Height="175"/>
+            <Polygon Fill="Green" Points="0,0 275,0 275,200" StrokeThickness="2"/>
+        </StackPanel>
+        <Canvas Margin="50,719,1324,59">
+            <Rectangle Fill= "Blue"
+                       Width="220"
+                       Height="220"/>
+            <Ellipse Fill="red" Width="175" Height="175"/>
+            <Polygon Fill="Green" Points="0,0 275,0 275,200" StrokeThickness="2"/>
+        </Canvas>
+
+    </Grid>
+</Page>
