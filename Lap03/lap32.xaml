@@ -9,6 +9,27 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <StackPanel Margin="10,20,0,0">
+            <TextBlock Text="Lorem Ipsum " FontSize="48" Margin="10,0,0,20"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="250" TextWrapping="Wrap" Margin="10,0,0,20">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum sit amet neque nec eros interdum laoreet nec
+                </TextBlock>
+                <TextBlock Width="500" TextWrapping="Wrap" Margin="10,0,0,20">
+                    Vestibulum varius bibendum metus. Aliquam erat volutpat.
+                    Praesent volutpat odio sed ante posuere lacinia. Suspendisse eget ullamcrop
+                    Nunc a vehicula velit. Vivamus rutrum elementum massa in consectetur.
+                </TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,20">
+                    <Rectangle Fill="Blue" Width="200" Height="200" VerticalAlignment="Top"/>
+                    <StackPanel>
+                        <Rectangle Fill="red" Width="100" Height="100"/>
+                        <Rectangle Fill="Yellow" Width="100" Height="100"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Page>

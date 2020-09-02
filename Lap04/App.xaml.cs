@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Lap03
+namespace Lap04
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -66,7 +66,7 @@ namespace Lap03
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(lap32), e.Arguments);
+                    rootFrame.Navigate(typeof(lap44), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

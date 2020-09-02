@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{076F317C-CCFA-4303-AC86-BF761D92C611}</ProjectGuid>
+    <ProjectGuid>{910C3702-ECBA-429D-BC0C-FCAC72A5098A}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lap03</RootNamespace>
-    <AssemblyName>Lap03</AssemblyName>
+    <RootNamespace>Lap04</RootNamespace>
+    <AssemblyName>Lap04</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
@@ -119,11 +119,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="lap31.xaml.cs">
-      <DependentUpon>lap31.xaml</DependentUpon>
+    <Compile Include="lap41.xaml.cs">
+      <DependentUpon>lap41.xaml</DependentUpon>
     </Compile>
-    <Compile Include="lap32.xaml.cs">
-      <DependentUpon>lap32.xaml</DependentUpon>
+    <Compile Include="lap42.xaml.cs">
+      <DependentUpon>lap42.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="lap43.xaml.cs">
+      <DependentUpon>lap43.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="lap44.xaml.cs">
+      <DependentUpon>lap44.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,11 +153,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="lap31.xaml">
+    <Page Include="lap41.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="lap32.xaml">
+    <Page Include="lap42.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lap43.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lap44.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
