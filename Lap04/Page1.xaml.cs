@@ -28,7 +28,7 @@ namespace Lap04
         }
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Page1));
+            Frame.Navigate(typeof(Page2));
         }
     }
 }

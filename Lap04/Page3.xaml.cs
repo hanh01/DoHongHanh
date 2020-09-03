@@ -20,24 +20,16 @@ namespace Lap04
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Page2 : Page
+    public sealed partial class Page3 : Page
     {
-        public Page2()
+        public Page3()
         {
             this.InitializeComponent();
         }
-
-        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
-        {
-            App.SomeImportantValue = ValueTextBox.Text;
-            Frame.Navigate(typeof(Page3), ValueTextBox.Text);
-        }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (!String.IsNullOrEmpty(App.SomeImportantValue))
-            {
-                ValueTextBox.Text = App.SomeImportantValue;
-            }
+            var value = (string)e.Parameter;
+            ValueTextBox.Text = value;
         }
     }
 }

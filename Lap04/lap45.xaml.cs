@@ -45,5 +45,9 @@ namespace Lap04
                 MyFrame.GoForward();
             }
         }
+        private void NavigateButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Page2));
+        }
     }
 }

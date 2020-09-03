@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Lap04.Page21"
+    x:Class="Lap04.Page2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Lap04"
@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <TextBlock FontSize="48" Text="Page 2"/>
-        <HyperlinkButton Content="GO to Page 2" Click="HyperlinkButton_Click"/>
+        <TextBlock FontSize="48" Text="Page2"/>
+        <TextBox Name="ValueTextBox" Width="200"/>
+        <HyperlinkButton Content="GO to Page 3" Click="HyperlinkButton_Click"/>
     </StackPanel>
 </Page>
