@@ -25,6 +25,25 @@ namespace Lap04
         public lap45()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(Page1));
+        }
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Page1));
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+           if (MyFrame.CanGoBack)
+            {
+                MyFrame.GoBack();
+            }
+        }
+        private void ForwardButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoForward)
+            {
+                MyFrame.GoForward();
+            }
         }
     }
 }

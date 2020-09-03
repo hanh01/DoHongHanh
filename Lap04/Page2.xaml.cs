@@ -20,11 +20,15 @@ namespace Lap04
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Page21 : Page
+    public sealed partial class Page2 : Page
     {
-        public Page21()
+        public Page2()
         {
             this.InitializeComponent();
+        }
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Page2));
         }
     }
 }

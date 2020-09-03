@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel>
+            <TextBlock FontSize="48" Text="Page 1"/>
+            <HyperlinkButton Content="GO to Page 2" Click="HyperlinkButton_Click"/>
+            <HyperlinkButton Content="Go to Microsoft.com" NavigateUri="youtube.com/watch?v=7-fHHADvIi8"/>
+        </StackPanel>
     </Grid>
 </Page>

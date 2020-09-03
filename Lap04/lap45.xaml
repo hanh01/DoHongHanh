@@ -9,6 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="0,20,0,0"/>
+                <Button Margin="0,20,0,0"/>
+                <Button Margin="0,20,0,0"/>
+            </StackPanel>
+            <Frame Name="MyFrame">
+                
+            </Frame>
+>        </StackPanel>
     </Grid>
 </Page>

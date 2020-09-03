@@ -26,5 +26,9 @@ namespace Lap04
         {
             this.InitializeComponent();
         }
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Page1));
+        }
     }
 }
