@@ -9,6 +9,29 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+            <Image Source="/Assets/Wide310x150Logo.scale-200.png" Height="800" Stretch="None" />
+        </ScrollViewer>
 
+        <ScrollViewer
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Image Source="/Assets/Wide310x150Logo.scale-200.png" Height="800" Stretch="None" />
+                <Image Source="/Assets/Wide310x150Logo.scale-200.png" Height="800" Stretch="None" />
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -8,7 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <Canvas>
+        <Line X1="10" X2="200" Y1="10" Y2="10" Stroke="Black" Fill="Black" StrokeThickness="5" StrokeEndLineCap="Triangle"/>
+        <Line X1="58" X2="10" Y1="25" Y2="100" Stroke="Black" Fill="Black" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+        <Line X1="110" X2="58" Y1="100" Y2="25" Stroke="Black" Fill="Black" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+        <Line X1="110" X2="10" Y1="100" Y2="100" Stroke="Black" Fill="Black" StrokeThickness="5" StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+        <Polyline Canvas.Left="150" Canvas.Top="0" Stroke="Black" Fill="Red" StrokeThickness="5" Points="50,25 0,100 100,100 50,25" StrokeLineJoin="Round" StrokeEndLineCap="Round" StrokeStartLineCap="Round"/>
+        <TextBlock Name="HelloTextBlock" Canvas.Left="50" Canvas.Top="150" FontSize="24" Text="Shapes Example"></TextBlock>
+        <Rectangle Canvas.Top="200" Canvas.Left="0" Height="50" Width="100" Fill="Yellow" Canvas.ZIndex="100"/>
+        <Ellipse Stroke="Blue" Width="50" Height="100" Canvas.Top="200" Canvas.Left="10" StrokeThickness="10" Canvas.ZIndex="15"/>
+    </Canvas>
 </Page>

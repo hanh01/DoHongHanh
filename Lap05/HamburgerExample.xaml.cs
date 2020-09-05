@@ -20,11 +20,23 @@ namespace Lap05
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class U21 : Page
+    public sealed partial class HamburgerExample : Page
     {
-        public U21()
+        public HamburgerExample()
         {
             this.InitializeComponent();
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ShareListBoxItem.IsSelected) { ResultTextBlock.Text = "Share"; }
+            else if (FavoritesListBoxItem.IsSelected) { ResultTextBlock.Text = "Favorites"; }
+        }
     }
 }
+

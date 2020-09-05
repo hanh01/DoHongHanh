@@ -26,5 +26,33 @@ namespace Lap05
         {
             this.InitializeComponent();
         }
+        private void MyCalendarView_SelectedDatesChanged(
+            CalendarView sender,
+            CalendarViewSelectedDatesChangedEventArgs args)
+        {
+            var selectedDates = sender.SelectedDates.Select(p => p.Date.Month.ToString() + "/" + p.Date.Day.ToString())
+                .ToArray();
+
+            var values = string.Join(",", selectedDates);
+            CalendarViewResultTextBlock.Text = values;
+        }
+
+        private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyFlyout.Hide();
+        }
+        private string[] selectionItems = new string[]
+          {"Ferdinand", "Frank", "Frida", "Higel", "Tag", "Tanya", "Tanner", "Todd" };
+        private void MyAutoSuggestBox_TextChanged(
+            AutoSuggestBox sender,
+            AutoSuggestBoxTextChangedEventArgs args)
+        {
+            var autoSuggesBox = (AutoSuggestBox)sender;
+            var filtered = selectionItems.Where(p => p.StartsWith(autoSuggesBox.Text))
+                .ToArray();
+
+            autoSuggesBox.ItemsSource = filtered;
+        }
+  
     }
 }
