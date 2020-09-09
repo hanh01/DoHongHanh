@@ -49,10 +49,19 @@
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
+            <Button Content="Hanh" Style="{StaticResource FlyoutButtonStyle}">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="1" Click="Hanh_Click"/>
+                        <MenuFlyoutItem Text="2" Click="Hanh_Click"/>
+                        <MenuFlyoutItem Text="3" Click="Hanh_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <TextBlock Text="Coffee:" Style="{StaticResource LabelTextBlockStyle}"/>
-            <TextBlock Text="ResultTextBlock:" Style="{StaticResource LabelTextBlockStyle}"/>
+            <TextBlock Name="ResultTextBlock" Style="{StaticResource LabelTextBlockStyle}"/>
         </StackPanel>
     </Grid>
 

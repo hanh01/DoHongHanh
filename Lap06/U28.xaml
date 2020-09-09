@@ -14,13 +14,17 @@
             <SolidColorBrush x:Key="MYBrush" Color="Brown"/>
             <x:String x:Key="greeting">Hello world </x:String>
             <Style TargetType="Button" x:Key="MyButtonStyle">
-                <Setter Property="Background" Value="Blue"/>
+                <Setter Property="Background" Value="Green"/>
                 <Setter Property="FontFamily" Value="Arial Black"/>
                 <Setter Property="FontSize" Value="36"/>
             </Style>
+            <!--<Style TargetType="TextBlock" x:Key="TextBlockStyle">
+                <Setter Property="FontSize" Value="40"/>
+            </Style>      (Viet truc tiep) --> 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictionary1.xaml"/>
                 <ResourceDictionary Source="Dictionary2.xaml"/>
+                <ResourceDictionary Source="VD.xaml"/> 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -30,5 +34,6 @@
         <Button Content="My Button Style Example"
                 Height="100"
                 Style="{StaticResource MyButtonStyle}"/>
+        <TextBlock Text="Hanh xinh gai" Style="{StaticResource TextBlockStyle}"/>
     </StackPanel>
 </Page>

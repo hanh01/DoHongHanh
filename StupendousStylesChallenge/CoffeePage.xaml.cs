@@ -23,6 +23,7 @@ namespace StupendousStylesChallenge
     /// </summary>
     public sealed partial class CoffeePage : Page
     {
+        private String _roast, _sweetener, _cream, _hanh;
         public CoffeePage()
         {
             this.InitializeComponent();
@@ -39,9 +40,15 @@ namespace StupendousStylesChallenge
         { var selected = (MenuFlyoutItem)sender;
             _cream = selected.Text;
             displayResult(); }
+        private void Hanh_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = (MenuFlyoutItem)sender;
+            _hanh = selected.Text;
+            displayResult();
+        }
 
         private void displayResult()
-        {
+        { 
             if (_roast == "None" || String.IsNullOrEmpty(_roast))
             {
                 ResultTextBlock.Text = "None";
@@ -52,6 +59,8 @@ namespace StupendousStylesChallenge
                 ResultTextBlock.Text += " + " + _cream;
             if (_sweetener != "None" && !String.IsNullOrEmpty(_sweetener))
                 ResultTextBlock.Text += " + " + _sweetener;
+            if (_hanh != "None" && !String.IsNullOrEmpty(_hanh))
+                ResultTextBlock.Text += " + " + _hanh;
         }
     }
 }

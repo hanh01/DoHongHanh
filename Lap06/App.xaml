@@ -12,6 +12,10 @@
             <Setter Property="FontFamily" Value="Arial Black"/>
             <Setter Property="FontSize" Value="36"/>
         </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="Foreground" Value="Purple"/>
+        </Style>
     </Application.Resources>
 
 </Application>
