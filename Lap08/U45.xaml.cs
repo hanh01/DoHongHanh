@@ -12,28 +12,24 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Lap07.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Lap07
+namespace Lap08
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class U45 : Page
     {
-        private List<Book> Books;
-
-        public MainPage()
+        public U45()
         {
             this.InitializeComponent();
-            Books = Book_Manager.GetBooks();
         }
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-            var book = (Book)e.ClickedItem;
-            ResultTextBlock.Text = "You selected" + book.Title;
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
     }
 }

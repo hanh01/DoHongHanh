@@ -12,22 +12,19 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Lap07.Models;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace Lap07
+namespace Lap08
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage1 : Page
+    public sealed partial class NewsItemControl : UserControl
     {
-        private List<Icon> Icons;
-        private Lap07<Contact> Contacts;
-        public MainPage1()
+        public Models.NewsItem NewsItem { get { return this.DataContext as Models.NewsItem; } }
+
+        public NewsItemControl()
         {
             this.InitializeComponent();
+            this.DataContextChanged += (s, e) => Bindings.Update();
         }
     }
 }

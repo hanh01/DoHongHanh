@@ -12,28 +12,30 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Lap07.Models;
+using Lap071.Models;
+using lap071.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Lap07
+namespace lap071
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private List<Book> Books;
+        private List<Student> Students;
 
         public MainPage()
         {
             this.InitializeComponent();
-            Books = Book_Manager.GetBooks();
+            Students = StudentManager.GetStudents();
         }
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        private void GridView_ItemClick1(Object sender, ItemClickEventArgs e)
         {
-            var book = (Book)e.ClickedItem;
-            ResultTextBlock.Text = "You selected" + book.Title;
+            var student = (Student)e.ClickedItem;
+            ResultTextBlock1.Text = "You selected" + student.Name;
         }
+       
     }
 }
