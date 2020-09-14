@@ -31,12 +31,14 @@ namespace Lap08
             this.InitializeComponent();
             NewsItems = new ObservableCollection<NewsItem>();
         }
+
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Financial.IsSelected)
             {
                 NewsManager.GetNews("Financial", NewsItems);
                 TitleTextBlock.Text = "Financial";
+
             }
             else if (Food.IsSelected)
             {
@@ -44,9 +46,11 @@ namespace Lap08
                 TitleTextBlock.Text = "Food";
             }
         }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Financial.IsSelected = true;
         }
+
     }
 }

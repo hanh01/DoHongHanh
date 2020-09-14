@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{5A66BAEA-C914-4D44-8A27-BEEEB5904ACF}</ProjectGuid>
+    <ProjectGuid>{154F95AC-6371-4B0C-9A41-B3A9802E3B3B}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lap07</RootNamespace>
-    <AssemblyName>Lap07</AssemblyName>
+    <RootNamespace>DemoLap7</RootNamespace>
+    <AssemblyName>DemoLap7</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
@@ -128,8 +128,8 @@
     <Compile Include="MainPage1.xaml.cs">
       <DependentUpon>MainPage1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Book .cs" />
-    <Compile Include="Models\Book Manager.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Icon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,25 +138,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\1.png" />
-    <Content Include="Assets\10.png" />
-    <Content Include="Assets\11.png" />
-    <Content Include="Assets\12.png" />
-    <Content Include="Assets\13.png" />
-    <Content Include="Assets\2.png" />
-    <Content Include="Assets\3.png" />
-    <Content Include="Assets\4.png" />
-    <Content Include="Assets\5.png" />
-    <Content Include="Assets\6.png" />
-    <Content Include="Assets\7.png" />
-    <Content Include="Assets\8.png" />
-    <Content Include="Assets\9.png" />
-    <Content Include="Assets\female-01.png" />
-    <Content Include="Assets\female-02.png" />
-    <Content Include="Assets\female-03.png" />
-    <Content Include="Assets\male-01.png" />
-    <Content Include="Assets\male-02.png" />
-    <Content Include="Assets\male-03.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
