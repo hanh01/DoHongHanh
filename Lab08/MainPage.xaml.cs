@@ -1,8 +1,7 @@
-﻿using Lap08.Models;
+﻿using Lab08.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -18,18 +17,23 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Lap08
+namespace Lab08
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class U46 : Page
+    public sealed partial class MainPage : Page
     {
         private ObservableCollection<NewsItem> NewsItems;
-        public U46()
+        public MainPage()
         {
             this.InitializeComponent();
             NewsItems = new ObservableCollection<NewsItem>();
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -51,6 +55,5 @@ namespace Lap08
         {
             Financial.IsSelected = true;
         }
-
     }
 }

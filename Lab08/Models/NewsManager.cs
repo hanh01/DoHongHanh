@@ -5,25 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lap08.Models
+namespace Lab08.Models
 {
     public class NewsManager
     {
-        public static void GetNews(
-            string category,
-            ObservableCollection<NewsItem> newsItems)
+        public static void GetNews(string category, ObservableCollection<NewsItem> newsItems)
         {
-            var allItems = GetNewsItems();
-            var filteredNewsItems = allItems
-                .Where(p => p.Category == category)
-                .ToList();
+            var allItems = getNewsItems();
+            var filteredNewsItems = allItems.Where(p => p.Category == category).ToList();
             newsItems.Clear();
+
             filteredNewsItems.ForEach(p => newsItems.Add(p));
+
         }
-        private static List<NewsItem> GetNewsItems()
+
+        private static List<NewsItem> getNewsItems()
         {
             var items = new List<NewsItem>();
-
             items.Add(new NewsItem() { Id = 1, Category = "Financial", Headline = "Lorem ipsum", Subhead = "dolor sit amet", DateLine = "Nunc tristique nec", Image = "Assets/Financial1.png" });
             items.Add(new NewsItem() { Id = 2, Category = "Financial", Headline = "Etiam ac felis viverra", Subhead = "vulputate nisl ac, aniquet nisi", DateLine = "tortor porttitor, eu fermentum ante cong", Image = "Assets/Financial2.png" });
             items.Add(new NewsItem() { Id = 3, Category = "Financial", Headline = "Integer sed turpis erat ", Subhead = "Sed quis hendrerit lorem, quis interdum dolor", DateLine = "in viverra metus facilisis sed", Image = "Assets/Financial3.png" });
@@ -35,7 +33,6 @@ namespace Lap08.Models
             items.Add(new NewsItem() { Id = 8, Category = "Food", Headline = "Integer sed turpis erat ", Subhead = "Sed quis hendrerit lorem, quis interdum dolor", DateLine = "in viverra metus facilisis sed", Image = "Assets/Food3.png" });
             items.Add(new NewsItem() { Id = 9, Category = "Food", Headline = "Integer sed turpis erat ", Subhead = "Sed quis hendrerit lorem, quis interdum dolor", DateLine = "in viverra metus facilisis sed", Image = "Assets/Food4.png" });
             items.Add(new NewsItem() { Id = 10, Category = "Food", Headline = "Integer sed turpis erat ", Subhead = "Sed quis hendrerit lorem, quis interdum dolor", DateLine = "in viverra metus facilisis sed", Image = "Assets/Food5.png" });
-
             return items;
         }
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lap08.Models
+namespace Lab08.Models
 {
     public class NewsItem
     {
