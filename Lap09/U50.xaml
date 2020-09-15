@@ -6,8 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+     xmlns:data="using:Lap09.Model"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+   
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -31,30 +32,59 @@
                             PlaceholderText="Search for sounds"
                             Width="200"
                             QueryIcon="Find"
-                            TextChanged="SearchAutoSuggesBox_TextChanged"
+                            Margin="0,5,10,0"
+                            TextChanged="SearchAutoSuggestBox_TextChanged"
                             QuerySubmitted="SearchAutoSuggestBox_QuerySubmitted" 
                             RelativePanel.AlignRightWithPanel="True"/>
         </RelativePanel>
+        
         <SplitView Name="MySplitView"
+                   Grid.Row="1"
                    DisplayMode="CompactOverlay"
                    CompactPaneLength="45"
                    OpenPaneLength="200">
+            
             <SplitView.Pane>
-                <ListView Name="MenuItemsListView" IsItemClickEnabled="True" ItemClick="MenuItemsListView_ItemClick"/>
+                <ListView Name="MenuItemsListView" 
+                          IsItemClickEnabled="True" 
+                          ItemsSource="{x:Bind MenuItems}"
+                          ItemClick="MenuItemsListView_ItemClick">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="data:MenuItem">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{x:Bind IconFile}" 
+                                       Height="35" 
+                                       Width="35"
+                                       Margin="-10,10,0,15"/>
+                                <TextBlock Text="{x:Bind Category}" 
+                                           FontSize="18" 
+                                           Margin="10,0,0,0"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </SplitView.Pane>
+            
             <SplitView.Content>
-                <Grid>
+                <Grid Margin="20,0,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <MediaElement Name="MyMediaElement" AutoPlay="True"/>
-                    <TextBlock Name="CategorytTextBlock" Text="All Sounds" FontSize="24"/>
+                    <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24"/>
                     <GridView Grid.Row="1"
-                              Name="SoundGridView_ItemClick">
+                              Name="SoundGridView"
+                              SelectionMode="None"
+                              IsItemClickEnabled="True"
+                              AllowDrop="True"
+                              Drop="SoundGridView_DragOver"
+                              ItemsSource="{x:Bind Sounds}"
+                              ItemClick="SoundGridView_ItemClick">
                         <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <Image Name="MyImage" Height="112" Width="101"/>
+                            <DataTemplate x:DataType="data:Sound">
+                                <Image Name="MyImage" Height="112" Width="101" Source="{x:Bind ImageFile}"/>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>

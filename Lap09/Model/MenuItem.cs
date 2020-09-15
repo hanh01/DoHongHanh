@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lap09.Model
 {
-    class MenuItem
+    public class MenuItem
     {
+        public string IconFile { get; set; }
+        public SoundCategory Category { get; set; }
     }
 }
