@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{46D433B0-1E50-46CE-845D-F1FEEEAB20FB}</ProjectGuid>
+    <ProjectGuid>{44E78082-BF21-4FBB-8A25-3FA19A263B8E}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lab10</RootNamespace>
@@ -122,6 +122,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\MenuManager.cs" />
+    <Compile Include="Models\NewsMenu.cs" />
+    <Compile Include="NewsMenuControl.xaml.cs">
+      <DependentUpon>NewsMenuControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +135,16 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\cake1.jpg" />
+    <Content Include="Assets\cake2.jpg" />
+    <Content Include="Assets\cake3.jpg" />
+    <Content Include="Assets\cake4.jpg" />
+    <Content Include="Assets\cake5.jpg" />
+    <Content Include="Assets\drink1.jpg" />
+    <Content Include="Assets\drink2.jpg" />
+    <Content Include="Assets\drink3.jpg" />
+    <Content Include="Assets\drink4.jpg" />
+    <Content Include="Assets\drink5.jpg" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -138,6 +152,7 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -147,6 +162,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewsMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Lab10.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,5 +24,34 @@ namespace Lab10
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ObservableCollection<NewsMenu> NewsMenus;
+        public MainPage()
+        {
+            this.InitializeComponent();
+            NewsMenus = new ObservableCollection<NewsMenu>();
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Cake.IsSelected)
+            {
+                MenuManager.GetNews("Cake", NewsMenus);
+                TitleTextBlock.Text = "Cake";
+            }else if (Drink.IsSelected)
+            {
+                MenuManager.GetNews("Drink", NewsMenus);
+                TitleTextBlock.Text = "Drink";
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Cake.IsSelected = true;
+        }
     }
 }

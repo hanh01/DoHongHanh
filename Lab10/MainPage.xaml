@@ -6,9 +6,69 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data="using:Lab10.Models"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="400"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Visiable"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20" Width="45" Height="45" HorizontalAlignment="Center" Click="HamburgerButton_Click"/>
+            <TextBlock Name="TitleTextBlock" RelativePanel.RightOf="HamburgerButton" FontSize="18" FontWeight="Bold" Margin="20,0,0,0"/>
+            <AutoSuggestBox Name="MyAutoSuggestBox" QueryIcon="Find" PlaceholderText="Search" RelativePanel.AlignRightWithPanel="True" Width="200" Margin="0,0,10,0"/>
+        </RelativePanel>
+
+        <SplitView Name="MySplitView" Grid.Row="1" DisplayMode="CompactOverlay" OpenPaneLength="150" CompactPaneLength="45">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Cake">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" FontSize="20"/>
+                            <TextBlock FontSize="18" Margin="20,0,0,0" Text="Cake"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Drink">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE1CE;" FontSize="20"/>
+                            <TextBlock FontSize="18" Margin="20,0,0,0" Text="Drink"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <GridView Name="NewsItemsGrid" HorizontalAlignment="Stretch" Margin="10,0,0,0" ItemsSource="{x:Bind NewsMenus}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="data:NewsMenu">
+                            <local:NewsMenuControl/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>
