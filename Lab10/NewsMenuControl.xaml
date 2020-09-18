@@ -22,7 +22,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="MainPanel.Width" Value="200"/>
-                        <Setter Target="MainPanel.Height" Value="275"/>
+                        <Setter Target="MainPanel.Height" Value="250"/>
                         <Setter Target="HeadLineTextBox.FontSize" Value="18"/>
                     </VisualState.Setters>
                 </VisualState>
@@ -39,8 +39,8 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <Image Name="MyImage" Source="{x:Bind NewsMenu.Image}"/>
-        <RelativePanel Grid.Row="1" Margin="10">
+        <Image Name="MyImage" Source="{x:Bind NewsMenu.Image}" Width="300" Height="320"/>
+        <RelativePanel Grid.Row="1" Margin="5">
             <TextBlock Text="{x:Bind NewsMenu.Name}" Name="HeadLineTextBox" RelativePanel.AlignTopWithPanel="True" FontSize="18" TextWrapping="Wrap"/>
             <TextBlock Text="{x:Bind NewsMenu.Price}" RelativePanel.Below="HeadLineTextBox"/>
             <TextBlock Text="{x:Bind NewsMenu.Qty}" RelativePanel.AlignBottomWithPanel="True" FontSize="10"/>
